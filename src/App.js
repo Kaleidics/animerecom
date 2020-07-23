@@ -1,10 +1,12 @@
 import React from 'react';
-import TestComponent from "./components/testcomponent"
+import SearchBar from "./components/SearchBar/SearchBar"
+import CardContainer from "./components/CardContainer/CardContainer"
 
 function App() {
   return (
     <div className="App">
-     <TestComponent />
+     <SearchBar />
+     <CardContainer />
     </div>
   );
 }

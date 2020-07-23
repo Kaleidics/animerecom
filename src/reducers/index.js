@@ -1,16 +1,9 @@
-import { FETCH_SEARCH_SUCCESS } from '../actions';
+import { combineReducers } from 'redux';
 
-const initialState = {
-  searchHistory: [],
-  searchResults: []
-};
+import setSearchResults from "./setSearchResults";
 
-export const Reducer = (state = initialState, action) => {
-    if (action.type === FETCH_SEARCH_SUCCESS) {
-        return Object.assign({}, state, {
-            searchResults: action.searchResults
-        });
-    }
+const rootReducer = combineReducers({
+    searchResults: setSearchResults
+});
 
-    return state;
-};
+export default rootReducer;
