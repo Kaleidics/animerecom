@@ -10,7 +10,7 @@ class CardContainer extends React.Component {
   render() {
     
     let CardList = this.props.searchResults.searchResults.results ? this.props.searchResults.searchResults.results.map(data => {
-      return <AnimeCard data={data} />
+      return <AnimeCard data={data} key={data.title} />
     }) : null;
 
     return (

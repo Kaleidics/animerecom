@@ -8,13 +8,13 @@ export default class AnimeCard extends React.Component {
 
         return (
             <div className='anime-card'>
-                <img class='anime-card__img' src={anime.image_url} alt={anime.title} />
+                <img className='anime-card__img' src={anime.image_url} alt={anime.title} />
                 <div className="anime-card__text-content">
                   <cite className='anime-card__title'>{anime.title}</cite>
                   <p className='anime-card__start-date'>{anime.start_date}</p>
-                  <p class='anime-card__episodes'>Episodes: {anime.episodes}</p>
+                  <p className='anime-card__episodes'>Episodes: {anime.episodes}</p>
                 </div>
-                <div class="anime-card__divider" ></div>
+                <div className="anime-card__divider" ></div>
                 <p className="anime-card__synopsis">{anime.synopsis}</p>
             </div>
         );

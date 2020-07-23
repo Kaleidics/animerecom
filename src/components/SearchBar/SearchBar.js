@@ -9,14 +9,20 @@ import './SearchBar.css';
 class SearchBar extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { searchValue: '' };
+        this.state = { 
+            searchValue: '',
+        };
 
         this.handleInput = this.handleInput.bind(this);
         this.handleSearch = this.handleSearch.bind(this);
     }
 
-    componentDidMount() {}
+    componentDidMount() {
+       
+        
+    }
 
+   
     handleInput(e) {
         this.setState({ searchValue: e.target.value });
     }
@@ -43,11 +49,11 @@ class SearchBar extends React.Component {
                     </div>
                 </form>
                 <div className="search-bar__actions">
-                    <button type='submit' className='search-bar__btn btn--search'>
+                    <button type='submit' className='search-bar__btn btn--search' onClick={this.handleSearch}>
                         Search
                     </button>
                     <button type='submit' className='search-bar__btn btn--option'>
-                        I'm looking for something else
+                        Something Specific
                     </button>
                 </div>
             </div>
